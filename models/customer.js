@@ -15,7 +15,6 @@ class Customer {
   }
 
   /** find all customers. */
-
   static async all() {
     const results = await db.query(
       `SELECT id, 
@@ -77,6 +76,10 @@ class Customer {
         [this.firstName, this.lastName, this.phone, this.notes, this.id]
       );
     }
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}` 
   }
 }
 

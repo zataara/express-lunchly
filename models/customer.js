@@ -29,7 +29,6 @@ class Customer {
   }
 
   /** get a customer by ID. */
-
   static async get(id) {
     const results = await db.query(
       `SELECT id, 
